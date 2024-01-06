@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Food Cart</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="index.css" media="screen" type="text/css" />
+	<script type="module" src="index.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body >
+
+	<div class="container site">
+		<header id="masthead">
+			<div>
+				<img src="assets/logo Kura - long.jpg" height="100vh">
+				<span class="tagline">belief of of people since 1999
+			</div>
+		</header>
+		<div class="content">
+			<form action="order.html" method="post" id="checkout-order-form">
+				
+					<fieldset id="fieldset-billing"class="text-center align-items-center">
+						<legend class="legend">Your Details</legend>
+							<!-- Name, Email, City, Address, ZIP Code, Country (select box) -->
+
+						<div class="d-flex flex-column align-items-center justify-content-center">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" data-type="string" data-message="This field may not be empty" />
+						</div>
+
+						<div class="d-flex flex-column align-items-center justify-content-center">
+							<label for="email">Whatsapp Number</label>
+							<input type="text" name="waNum" id="waNum" data-type="string" data-message="This field may not be empty" />
+						</div>
+
+						<div class="d-flex flex-column align-items-center justify-content-center">
+							<label for="location">Location</label>
+							<select name="location" id="location" class="custom-select custom-select-lg mb-3">
+								<option value="IBOE8">IBO E Lt. 8 Foresta</option>
+								<option value="IBOE8">IBO C Lt. 8 Foresta</option>
+							</select>
+						</div>
+					</fieldset>
+
+			</form>			
+			<h1>Pre-Order : </h1>
+
+			<table id="checkout-cart" class="shopping-cart">
+				<thead>
+					<tr>
+						<th scope="col">Item</th>
+						<th scope="col">Qty</th>
+						<th scope="col">Price</th>
+					</tr>
+				</thead>
+				<tbody id="billingsDetail">
+					<tr>
+						<td colspan="3">No Item</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div id="pricing" class="text-center">
+				<p>
+					<strong>Total</strong>: <span id="total"><strong>0</strong></span>
+				</p>
+			</div>
+			<div class="text-center">
+				<button type="button" id="addButton" class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#menuModal"><strong>Add Order</strong> </button>
+			</div>
+			<div class="modal fade" id="menuModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+				<div class="modal-dialog">
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <h1 class="modal-title fs-5" id="staticBackdropLabel">Menu</h1>
+					  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div id="menuList" class="container content">
+							<div id="menuCoffee" class="menu">
+								<legend class="legend">Coffee</legend>
+								<div  id="menuCoffeeItems">
+					
+								</div>
+							</div>        
+							<div  id="menuNonCoffee" class="menu">
+								<legend class="legend">Non Coffee</legend>
+								<div id="menuNonCoffeeItems">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+					  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Done</button>
+					</div>
+				  </div>
+				</div>
+			  </div>
+		</div>
+
+	</div>
+	<br><br><br>
+
+
+	</body>
+	<footer class="site-footer">
+		Copyright &copy;Kura Coffee
+	</footer>
+</html>	
