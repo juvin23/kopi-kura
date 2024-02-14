@@ -1,0 +1,12 @@
+Name : [name]
+Phone Number : [phoneNum]
+========================================
+Order Details 
+========================================
+Sen, 01 Feb | Latte - No S.      | 13,000
+            | Latte - Little S.  
+Sel, 02 Feb | L Black - Normal S.| 13,000
+Tue, 23 Jan | Long Black - Normal| 11,000 
+========================================
+=========================================
+Total 26,000
